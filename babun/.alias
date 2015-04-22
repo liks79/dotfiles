@@ -1,3 +1,47 @@
+# Python utility
 alias pt='ipython'
 alias serve='python -mSimpleHTTPServer'
 alias json="python -mjson.tool"
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias ve='virtualenv '
+#complete -o default -o nospace -F _virtualenv ve
+alias ve-create="virtualenv --no-site-packages env"
+alias ve-activate="source env/Scripts/activate"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Projects"
+alias h="history"
+alias j="jobs"
+alias v="vim"
+alias m="mate ."
+alias s="sb"
+alias o="open"
+alias oo="open ."
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+alias q='exit'
+alias tf='tail -F -n200'
+alias md='mkdir -p'
+alias rd='rmdir'
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up two directories
+alias -- -='cd -'        # Go back
+
+# for windows (babun)
+alias tom='explorer .'
+
+
+
+# Misc
+# Get week number
+alias week='date +%V'
+
+# Disk usage with human sizes and minimal depth
+alias du1='du -h --max-depth=1'
+alias fn='find . -name'
+alias hi='history | tail -20'
