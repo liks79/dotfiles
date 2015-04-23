@@ -52,4 +52,5 @@ alias hi='history | tail -20'
 alias td='tmux detach'
 alias ta='tmux attach -t '
 alias tn='tmux new -s '
+alias tl='tmux ls'
 
