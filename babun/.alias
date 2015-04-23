@@ -46,3 +46,9 @@ alias now='date +"%Y%m%d_%H%M%S"'
 alias du1='du -h --max-depth=1'
 alias fn='find . -name'
 alias hi='history | tail -20'
+
+# for tmux 
+alias td='tmux detach'
+alias ta='tmux attach -t '
+alias tn='tmux new -s '
+
