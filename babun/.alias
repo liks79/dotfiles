@@ -31,10 +31,11 @@ alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up two directories
 alias -- -='cd -'        # Go back
+alias reload='source ~/.alias;source ~/.alias_on_site'
+
 
 # for windows (babun)
 alias tom='explorer .'
-
 
 
 # Misc
