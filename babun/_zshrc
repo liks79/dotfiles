@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 #export LC_ALL="ko_KR.UTF-8"
 
 source ${HOME}/.alias 
-source ${HOME}/.alias_on_site
+source ${HOME}/.alias_on_site 2> /dev/null
 
 ################################################################################
 # Change MS Window codepage : 65001 (UTF-8)

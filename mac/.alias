@@ -1,3 +1,0 @@
-alias pt='ipython'
-alias serve='python -mSimpleHTTPServer'
-alias json="python -mjson.tool"

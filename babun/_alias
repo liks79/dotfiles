@@ -1,0 +1,50 @@
+# Python utility
+alias pt='ipython'
+alias serve='python -mSimpleHTTPServer'
+alias json="python -mjson.tool"
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias ve='virtualenv '
+#complete -o default -o nospace -F _virtualenv ve
+alias ve-create="virtualenv --no-site-packages env"
+alias ve-activate="source env/Scripts/activate"
+
+# Shortcuts
+lias h="history"
+alias v="vim"
+alias o="open"
+alias oo="open ."
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+alias q='exit'
+alias tf='tail -F -n200'
+alias md='mkdir -p'
+alias rd='rmdir'
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -='cd -'        # Go back
+alias reload='source ~/.alias;source ~/.alias_on_site'
+
+
+# for windows (babun)
+alias tom='explorer .'
+
+
+# Misc
+# Get week number
+alias week='date +%V'
+alias now='date +"%Y%m%d_%H%M%S"'
+alias today='date +"%Y%m%d"'
+
+# Disk usage with human sizes and minimal depth
+alias du1='du -h --max-depth=1'
+alias fn='find . -name'
+alias hi='history | tail -20'
+
+# for tmux 
+alias td='tmux detach'
+alias ta='tmux attach -t '
+alias tn='tmux new -s '
+alias tl='tmux ls'
+

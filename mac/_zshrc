@@ -1,0 +1,51 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+################################################################################
+# created date : 2015년 4월 24일 금요일 06시 32분 47초 KST
+# file : .zshrc
+# desc : Jou Sung-Shik's .zshrc for macbook
+################################################################################
+
+# Alias
+source ${HOME}/.alias 
+source ${HOME}/.alias_on_site 2> /dev/null
+
+################################################################################
+# Advanced directory changer : https://github.com/rupa/z
+################################################################################ 
+source $HOME/.zcd/z.sh
+export PATH=$PATH:$HOME/.zcd
+
+
+################################################################################
+# Check my ssd usage status!
+################################################################################ 
+DISK_USED=`df -h | head -n 2 | tail -n 1 | awk '{print $3}'`
+DISK_FREE=`df -h | head -n 2 | tail -n 1 | awk '{print $4}'`
+echo "* USED : ${DISK_USED%i}B "
+echo "* FREE : ${DISK_FREE%i}B"
+
+echo 
+
+
+################################################################################
+# SCM Breeze for Git : https://github.com/ndbroadbent/scm_breeze
+################################################################################ 
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "/Users/liks/.scm_breeze/scm_breeze.sh"
+
+# Command Line Edition Mode
+set -o vi
+
+
