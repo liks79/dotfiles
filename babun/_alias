@@ -9,7 +9,7 @@ alias ve-create="virtualenv --no-site-packages env"
 alias ve-activate="source env/Scripts/activate"
 
 # Shortcuts
-lias h="history"
+alias h="history"
 alias v="vim"
 alias o="open"
 alias oo="open ."
