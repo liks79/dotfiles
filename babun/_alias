@@ -27,10 +27,6 @@ alias -- -='cd -'        # Go back
 alias reload='source ~/.alias;source ~/.alias_on_site'
 
 
-# for windows (babun)
-alias tom='explorer .'
-
-
 # Misc
 # Get week number
 alias week='date +%V'
