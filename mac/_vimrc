@@ -30,6 +30,21 @@ Plugin 'taglist.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'lepture/vim-jinja'
+Plugin 'sjl/gundo.vim'
+
+if version < 704
+  Plugin 'JulesWang/css.vim'
+endif
+
+Plugin 'othree/html5.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'stephpy/vim-yaml'
+Plugin 'cstrahan/vim-capnp'
+Plugin 'dag/vim2hs'
+Plugin 'Shougo/vimfiler.vim'
+
+
 "Plugin 'file:///home/gmarik/path/to/plugin'
 "Plugin 'user/L9', {'name': 'newL9'}
 
@@ -47,7 +62,8 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""
 
 
-
+"Prefer UTF-8.
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp949,korea,iso-2022-kr
 
 set cursorline
 set modelines=0
@@ -80,6 +96,56 @@ set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 set nocindent
 
 highlight Pmenu guibg=brown gui=bold
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" Referenced from Hong Minhee's Vim settings
+" https://github.com/dahlia/vimrc 
+""""""""""""""""""""""""""""""""""""""""""""
+"Some additional syntax highlighters.
+au! BufRead,BufNewFile *.wsgi setfiletype python
+au! BufRead,BufNewFile *.sass setfiletype sass
+au! BufRead,BufNewFile *.scss setfiletype scss
+au! BufRead,BufNewFile *.haml setfiletype haml
+au! BufRead,BufNewFile *.less setfiletype less
+
+"These languages have their own tab/indent settings.
+au FileType cpp    setl ts=2 sw=2 sts=2
+au FileType ruby   setl ts=2 sw=2 sts=2
+au FileType yaml   setl ts=2 sw=2 sts=2
+au FileType html   setl ts=2 sw=2 sts=2
+au FileType jinja  setl ts=2 sw=2 sts=2
+au FileType lua    setl ts=2 sw=2 sts=2
+au FileType haml   setl ts=2 sw=2 sts=2
+au FileType sass   setl ts=2 sw=2 sts=2
+au FileType scss   setl ts=2 sw=2 sts=2
+au FileType make   setl ts=4 sw=4 sts=4 noet
+au FileType gitcommit setl spell
+
+"Markdown-related configurations.
+augroup mkd
+  autocmd BufRead *.markdown set formatoptions=tcroqn2 comments=n:> spell
+  autocmd BufRead *.mkdn     set formatoptions=tcroqn2 comments=n:> spell
+  autocmd BufRead *.mkd      set formatoptions=tcroqn2 comments=n:> spell
+augroup END
+
+"English spelling checker.
+setlocal spelllang=en_us
+
+"Gundo -- Undo tree visualization
+map <F2> :NERDTreeToggle<CR>
+map <F4> :GundoToggle<CR>
+
+
+
+"Use Vimfiler as default explorer like netrw
+let g:vimfiler_as_default_explorer = 1
+
+""""""""""""""""""""""""""""""
+" End of Hong Minhee's Vim Settings 
+""""""""""""""""""""""""""""""
+
 
 
 """"""""""""""""""""""""""""""
