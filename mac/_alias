@@ -4,6 +4,7 @@ alias serve='python -mSimpleHTTPServer'
 alias json="python -mjson.tool"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
+alias pubip='python -c "from json import load; from urllib2 import urlopen; print load(urlopen(\"http://httpbin.org/ip\"))[\"origin\"]"'
 alias ve='virtualenv '
 #complete -o default -o nospace -F _virtualenv ve
 alias ve-create="virtualenv --no-site-packages env"
