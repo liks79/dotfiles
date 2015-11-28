@@ -3,6 +3,7 @@ alias pt='ipython'
 alias serve='python -mSimpleHTTPServer'
 alias json="python -mjson.tool"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
 alias ve='virtualenv '
 #complete -o default -o nospace -F _virtualenv ve
 alias ve-create="virtualenv --no-site-packages env"
