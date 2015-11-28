@@ -3,6 +3,7 @@ alias pt='ipython'
 alias serve='python -mSimpleHTTPServer'
 alias json="python -mjson.tool"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
 alias ve='virtualenv '
 #complete -o default -o nospace -F _virtualenv ve
 alias ve-create="virtualenv --no-site-packages env"
@@ -43,4 +44,7 @@ alias td='tmux detach'
 alias ta='tmux attach -t '
 alias tn='tmux new -s '
 alias tl='tmux ls'
+
+# for MS windows (Korea)
+alias ip="ipconfig /all | iconv -f CP949 -t UTF-8"
 
