@@ -40,7 +40,7 @@ alias now='date +"%Y%m%d_%H%M%S"'
 alias today='date +"%Y%m%d"'
 
 # Disk usage with human sizes and minimal depth
-alias du1='du -h --max-depth=1'
+alias du1='du -hd1'
 alias fn='find . -name'
 alias hi='history | tail -20'
 
